@@ -19,7 +19,8 @@
     "lint": "eslint '**/*.{js,jsx}'",
     "format": "prettier --write \"**/*.+(js|jsx|css)\"",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -64,6 +65,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "husky": "^7.0.0"
   }
 }
