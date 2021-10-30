@@ -62,6 +62,10 @@ The configuration for Prettier is inside the `.prettierrc` file, located in the 
 
 This repository uses lint-staged and husky to run ESLint checks before all commits.
 
+### Skipping pre-commit checks
+
+Use the `--no-verify` option to skip pre-commit checks, but please note that this is **strongly discouraged**. 
+
 ### Configuration
 
 The configuration for lint-staged is inside the `lint-staged` object inside of `package.json`. Learn more about lint-staged [here](https://github.com/okonet/lint-staged).
