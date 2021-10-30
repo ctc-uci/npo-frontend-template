@@ -14,6 +14,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `yarn storybook`
+
+Runs Storybook.\
+Open [http://localhost:6006/](http://localhost:6006) to view it in the browser.
+
 ### `yarn format`
 
 Formats `.js`, `.jsx`, `.css` files with Prettier.\
@@ -39,9 +44,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Storybook
+
+This project has Storybook installed to help build UI components and pages in isolation. Read more about Storybook [here](https://storybook.js.org/).
+
 ## ESLint and Prettier
 
-This repository uses ESLint and Prettier to enforce the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+This project uses ESLint and Prettier to enforce the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
 ### ESLint Plugins
 
@@ -60,7 +69,7 @@ The configuration for Prettier is inside the `.prettierrc` file, located in the 
 
 ## Husky and lint-staged
 
-This repository uses lint-staged and husky to run ESLint checks before all commits.
+This project uses lint-staged and husky to run ESLint checks before all commits.
 
 ### Skipping pre-commit checks
 
