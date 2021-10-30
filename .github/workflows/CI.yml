@@ -13,11 +13,11 @@ jobs:
       - name: Run eslint with reviewdog
         uses: reviewdog/action-eslint@v1.14.0
         with:
-          github_token: ${{ secrets.CTC_TEMPLATE_PAT }}
+          github_token: ${{ secrets.CTC_DEVOPS_ORG_PAT }}
           reporter: github-pr-review
           fail_on_error: false
-          workdir: 'app/'
-
+          eslint_flags: '**/*.{js,jsx}'
+          
   detect-secrets:
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +25,7 @@ jobs:
     - name: Run detect-secrets with reviewdog
       uses: reviewdog/action-detect-secrets@master
       with:
-        github_token: ${{ secrets.CTC_TEMPLATE_PAT }}
+        github_token: ${{ secrets.CTC_DEVOPS_ORG_PAT }}
         reporter: github-pr-review
 
         # Prevents false positives from failing job
