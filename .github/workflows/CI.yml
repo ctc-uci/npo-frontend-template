@@ -17,6 +17,8 @@ jobs:
           reporter: github-pr-review
           fail_on_error: false
           eslint_flags: src/
+          workdir: '.'
+          reviewdog_flags: tee
 
   detect-secrets:
     runs-on: ubuntu-latest
