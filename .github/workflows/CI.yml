@@ -16,7 +16,6 @@ jobs:
           github_token: ${{ secrets.CTC_TEMPLATE_PAT }}
           reporter: github-pr-review
           fail_on_error: false
-          workdir: 'app/'
 
   detect-secrets:
     runs-on: ubuntu-latest
