@@ -39,7 +39,36 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## ESLint and Prettier
+
+This repository uses ESLint and Prettier to enforce the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+
+### ESLint Plugins
+
+Currently, the following ESLint plugins are installed:
+1. [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+1. [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
+1. [eslint-plugin-only-warn](https://github.com/bfanger/eslint-plugin-only-warn)
+
+Visit the links to learn more about each plugin.
+
+### Configuration
+
+The configuration for ESLint is inside the `.eslintrc.json` file, located in the root of the project. Learn more about ESLint [here](https://eslint.org/).
+
+The configuration for Prettier is inside the `.prettierrc` file, located in the root of the project. Learn more about Prettier [here](https://prettier.io/docs/en/index.html).
+
+## Husky and lint-staged
+
+This repository uses lint-staged and husky to run ESLint checks before all commits.
+
+### Configuration
+
+The configuration for lint-staged is inside the `lint-staged` object inside of `package.json`. Learn more about lint-staged [here](https://github.com/okonet/lint-staged).
+
+The configuration for husky is in the `.husky` directory, located in the root of the project. Learn more about husky [here](https://typicode.github.io/husky/).
+
+## Learn More about Create React App and React
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
