@@ -16,6 +16,7 @@ jobs:
           github_token: ${{ secrets.CTC_DEVOPS_ORG_PAT }}
           reporter: github-pr-review
           fail_on_error: false
+          eslint_flags: src/
 
   detect-secrets:
     runs-on: ubuntu-latest
