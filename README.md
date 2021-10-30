@@ -57,7 +57,6 @@ This project uses ESLint and Prettier to enforce the [Airbnb JavaScript Style Gu
 Currently, the following ESLint plugins are installed:
 1. [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
 1. [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
-1. [eslint-plugin-only-warn](https://github.com/bfanger/eslint-plugin-only-warn)
 
 Visit the links to learn more about each plugin.
 
