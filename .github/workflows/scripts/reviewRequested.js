@@ -33,7 +33,7 @@ const messageReviewer = async ({ context }) => {
     useUnifiedTopology: true,
   });
   const mongoConnection = mongoose.connection;
-  // After connection is established, do the things
+  // After connection is established, DM reviewer on Slack
   mongoConnection.once('open', async () => {
     try {
       const UserModel = getUserModel();
