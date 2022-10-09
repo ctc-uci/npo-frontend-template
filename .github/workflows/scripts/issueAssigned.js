@@ -32,14 +32,14 @@ const messageAssignee = async ({ context }) => {
     useUnifiedTopology: true,
   });
   const mongoConnection = mongoose.connection;
-  // After connection is established, DM the user on Slack
+  // After connection is established, DM assignee on Slack
   mongoConnection.once('open', async () => {
     try {
       const UserModel = getUserModel();
       const user = await UserModel.findOne({ github: assignee });
       await Bot.client.chat.postMessage({
         channel: user.slackId,
-        text: `You have been assigned to an <${url}|issue> for \`${context.payload.repository.name}\`!:worry-frog-cheer:`,
+        text: `You have been assigned to an <${url}|issue> for \`${context.payload.repository.name}\`! :worry-frog-cheer:`,
       });
     } catch (e) {
       console.log(e);
