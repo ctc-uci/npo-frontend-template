@@ -1,7 +1,4 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
 import chair from '../../images/chair-star-circle.png';
 import stars from '../../images/blue-star.png';
 import benefits from '../../images/benefits.png';
@@ -9,7 +6,7 @@ import classes from './Login.module.css';
 
 function Login() {
   return (
-    <Container className={classes.background}>
+    <div className={classes.background}>
       <h1>Login</h1>
       <p className={classes.p1}>
         We appreciate you signing up for a login at First Chair America. Our aim is for this
@@ -40,21 +37,25 @@ function Login() {
         </ul>
       </p>
 
-      <Container className={classes.container}>
-        <Container className={classes.verticalContainer}>
+      <div className={classes.container}>
+        <div className={classes.verticalContainer}>
           <div>
-            <Form.Control placeholder="Student's First Name" />
-            <Form.Control placeholder="Student's Last Name" />
+            <input type="text" placeholder="Student's First Name" />
+            <input type="text" placeholder="Student's Last Name" />
           </div>
-          <Form.Control placeholder="Student's First Chair Instrument" />
-          <Form.Control placeholder="Login Identification - Your Email Address" />
-          <Button style={{ color: '#af3034' }}>Click Here For Terms of Engagement</Button>
-          <Button className={classes.button}>Submit</Button>
-        </Container>
+          <input type="text" placeholder="Student's First Chair Instrument" />
+          <input type="text" placeholder="Login Identification - Your Email Address" />
+          <button style={{ color: '#af3034' }} type="button">
+            Click Here For Terms of Engagement
+          </button>
+          <button className={classes.button} type="button">
+            Submit
+          </button>
+        </div>
 
         <img src={benefits} alt="benefits" className={classes.benefits} />
-      </Container>
-    </Container>
+      </div>
+    </div>
   );
 }
 
