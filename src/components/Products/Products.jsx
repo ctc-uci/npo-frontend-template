@@ -12,18 +12,34 @@ function Products() {
         <h1 className={classes.title}>Other Products of ScholarshipAuditions.com</h1>
       </div>
       <div className={classes.container}>
-        <button className={classes.button} type="button" style={{ gridArea: '1 1 2 2' }}>
+        <a
+          className={classes.button}
+          href="https://www.nationalscholasticmusiciansawards.com/home"
+          style={{ gridArea: '1 1 2 2' }}
+        >
           <img src={nsma} alt="NSMA" />
-        </button>
-        <button className={classes.button} type="button" style={{ gridArea: '1 2 2 3' }}>
+        </a>
+        <a
+          className={classes.button}
+          href="https://www.nationalscholasticjuniormusiciansawards.com/home"
+          style={{ gridArea: '1 2 2 3' }}
+        >
           <img src={nsjma} alt="NJSMA" />
-        </button>
-        <button className={classes.button} type="button" style={{ gridArea: '2 1 3 2' }}>
+        </a>
+        <a
+          className={classes.button}
+          href="https://www.accoladi.com/"
+          style={{ gridArea: '2 1 3 2' }}
+        >
           <img src={accoladi} alt="Accoladi" />
-        </button>
-        <button className={classes.button} type="button" style={{ gridArea: '2 2 3 3' }}>
+        </a>
+        <a
+          className={classes.button}
+          href="https://www.mymusicfuture.com/"
+          style={{ gridArea: '2 2 3 3' }}
+        >
           <img src={mmf} alt="My Music Future" />
-        </button>
+        </a>
       </div>
     </div>
   );

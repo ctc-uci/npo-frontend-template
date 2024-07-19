@@ -1,12 +1,9 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import classes from './Contact.module.css';
-// import InputGroup from 'react-bootstrap/InputGroup';
 import amy from '../../images/military/amy-mccabe.png';
 import kristopher from '../../images/military/kristopher-westrich.png';
 import ruth from '../../images/military/ruth-keehner.png';
 import elizabeth from '../../images/military/elizabeth-mcginness.png';
+import classes from './Contact.module.css';
 
 function Contact() {
   const people = {
@@ -45,16 +42,18 @@ function Contact() {
         </div>
         <div className={classes.vertical}>
           <div className={classes.horizontalContainer}>
-            <Form.Control placeholder="Name" />
-            <Form.Control placeholder="Subject" />
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Subject" />
           </div>
-          <Form.Control placeholder="Email" style={{ height: '10%', paddingTop: '2%' }} />
-          <Form.Control
+          <input type="text" placeholder="Email" style={{ height: '10%', paddingTop: '2%' }} />
+          <input
+            type="textarea"
             placeholder="Message"
-            as="textarea"
             style={{ height: '100%', paddingTop: '1%' }}
           />
-          <Button className={classes.button}>Send</Button>
+          <button type="button" className={classes.button}>
+            Send
+          </button>
         </div>
       </div>
     </div>

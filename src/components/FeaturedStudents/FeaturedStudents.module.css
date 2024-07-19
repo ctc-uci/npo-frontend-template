@@ -9,7 +9,7 @@
 
 .featured {
   width: 100%;
-  height: 170vh;
+  height: 180vh;
   background-image: url('../../images/white-background.jpg');
   background-size: cover;
   background-position: center;
@@ -19,7 +19,7 @@
 .students {
   margin: 0% 5%;
   display: grid;
-  height: 77%;
+  height: 83%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 7%;
@@ -42,9 +42,8 @@
   color: white;
   background-color: #d99f2f;
   border: none;
-  height: 3%;
   width: 16%;
-  margin-top: 3%;
+  margin-top: 3vh;
   margin-left: 42%;
   font-size: 120%;
   display: absolute;

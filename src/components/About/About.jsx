@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import classes from './About.module.css';
 import destinyCosette from '../../images/students/destiny-cosette.png';
@@ -77,9 +76,9 @@ function About() {
           </div>
         </div>
       </div>
-      <Button className={classes.button} onClick={toProfile}>
+      <button className={classes.button} type="button" onClick={toProfile}>
         Start Profile
-      </Button>
+      </button>
     </div>
   );
 }
