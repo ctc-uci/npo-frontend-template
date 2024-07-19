@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,10 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.mainContent {
+  flex: 1;
+  overflow: auto; /* Adds scroll if needed */
+  background-color: var(--fph-gray-50, #f9f8f7);
 }

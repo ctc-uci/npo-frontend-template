@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, useLocation } from 'react-router-dom';
+// import { BackendProvider } from './contexts/BackendContext';
+import classes from './App.css';
+import Master from './components/Master/Master';
+import NavBar from './components/Navbar/Navbar';
+import Login from './components/Login/Login';
+// import Mission from './components/Mission/Mission.jsx';
+// import About from './components/About/About.jsx';
+// import FeaturedStudents from './components/FeaturedStudents/FeaturedStudents.jsx';
+// import Contact from './components/Contact/Contact.jsx';
+import Profile from './components/Profile/Profile';
+// import Search from './components/Search/Search.jsx';
 
 function App() {
+  const location = useLocation();
+  const currentRoute = location.pathname.toLowerCase();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // <BackendProvider>
+    <div>
+      {['/login', '/profile'].includes(currentRoute) || <NavBar />}
+      <div className={classes.mainContent}>
+        <Routes>
+          <Route exact path="/" element={<Master />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/profile" element={<Profile />} />
+          {/* <Route exact path="/Search" element={<Search />} /> */}
+        </Routes>
+      </div>
     </div>
+    // </BackendProvider>
   );
 }
 

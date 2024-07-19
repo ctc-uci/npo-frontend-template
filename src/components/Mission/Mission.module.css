@@ -1,0 +1,29 @@
+.background {
+  height: 40vh;
+  background: linear-gradient(to right, #2a478b, #0f1726, #2a478b);
+}
+
+.p {
+  margin: 1;
+  color: white;
+  font-size: 180%;
+  text-align: center;
+}
+
+.margins {
+  margin: 0% 5%;
+  height: 40vh;
+  align-items: center;
+  padding-top: 2%;
+}
+
+.stars {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars img {
+  width: 3%;
+  height: 3%;
+}

@@ -1,0 +1,50 @@
+.page {
+  width: 100vw;
+  height: 80vh;
+  background-image: url('../../images/us-flag-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0%;
+  padding-top: 3%;
+  position: relative;
+}
+
+.chair {
+  z-index: -1;
+  height: 115%;
+  /* background-image: url('../../images/chair.png');
+    background-position: center;
+    background-repeat: no-repeat;  */
+  position: absolute;
+  top: -5%;
+  left: 40%;
+  z-index: 1;
+}
+
+.home_title {
+  font-size: 500%;
+  margin: 5% 0 0 10%;
+  color: white;
+}
+
+.description {
+  font-size: 150%;
+  margin-top: 0;
+  margin-left: 10%;
+  color: white;
+}
+
+.button {
+  position: absolute;
+  background-color: #d99f2f!important;
+  color: white;
+  border: none!important;
+  height: 7%!important;
+  width: 10%!important;
+  right: 2%!important;
+  bottom: 5%!important;
+  font-size: 130%!important;
+  z-index: 2!important;
+  border-radius:0!important;
+}
