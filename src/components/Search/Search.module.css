@@ -1,0 +1,12 @@
+.drawer {
+  z-index: 300 !important;
+  background-color: white;
+}
+
+.links {
+  font-size: lg;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding: 24px;
+}

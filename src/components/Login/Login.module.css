@@ -23,7 +23,7 @@
   flex-direction: column;
   position: absolute;
   left: 13%;
-  top: 95%;
+  top: 60%;
   height: 35%;
 }
 
@@ -50,15 +50,15 @@
   width: 5%;
   position: absolute;
   left: 10%;
-  top: 38%;
-  height: 33%;
+  top: 25%;
+  height: 23%;
   width: 7%;
 }
 
 .guide {
   position: absolute;
   left: 18%;
-  top: 35%;
+  top: 25%;
   width: 50%;
   font-size: 130%;
 }
@@ -83,17 +83,18 @@
   color: white;
   background-color: #d99f2f;
   border: none;
-  height: 60%;
+  height: 30%;
   width: 40%;
   margin: 0 0 0 30%;
   font-size: 150%;
+  text-align: center;
 }
 
 .benefits {
   width: 40%;
   position: absolute;
   left: 50%;
-  top: 85%;
+  top: 50%;
 }
 
 .verticalContainer ::placeholder {

@@ -9,28 +9,38 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"**/*.+(js|jsx|css)\"",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "precommit": "lint-staged",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
     "@chakra-ui/icons": "^2.1.1",
+    "@vitejs/plugin-react": "^4.0.3",
     "add": "^2.0.6",
     "bootstrap": "^5.3.3",
     "boxicons": "^2.1.4",
-    "lint-staged": "^14.0.1",
+    "firebase": "^10.12.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
-    "react-html-email": "^3.0.0",
     "react-icons": "^5.0.1",
-    "yarn": "^1.22.21",
     "react-router-dom": "^6.21.1",
-    "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
-    "@vitejs/plugin-react": "^4.0.3",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "yarn": "^1.22.21"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.{js,jsx}": "yarn run eslint"
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -75,9 +85,9 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "firebase": "^9.23.0",
     "framer-motion": "^10.18.0",
     "husky": "^8.0.3",
+    "lint-staged": "^12.5.0",
     "prettier": "^3.0.3"
   }
 }

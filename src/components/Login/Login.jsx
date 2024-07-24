@@ -1,12 +1,32 @@
-import React from 'react';
+import { React, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useDisclosure, Checkbox, useCheckbox } from '@chakra-ui/react';
+import Terms from './Terms/Terms';
+import TestComponent from '../TestComponent/TestComponent';
 import chair from '../../images/chair-star-circle.png';
 import stars from '../../images/blue-star.png';
 import benefits from '../../images/benefits.png';
 import classes from './Login.module.css';
 
 function Login() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = event => {
+    setIsChecked(event.target.checked);
+  };
+
+  function submit() {
+    if (isChecked === true) {
+      console.log('sumbit');
+    } else {
+      console.log('block');
+    }
+  }
+
   return (
-    <div className={classes.background}>
+    <div id="login" className={classes.background}>
+      <Terms isOpen={isOpen} onClose={onClose} />
       <h1>Login</h1>
       <p className={classes.p1}>
         We appreciate you signing up for a login at First Chair America. Our aim is for this
@@ -45,15 +65,27 @@ function Login() {
           </div>
           <input type="text" placeholder="Student's First Chair Instrument" />
           <input type="text" placeholder="Login Identification - Your Email Address" />
-          <button style={{ color: '#af3034' }} type="button">
+          <button
+            style={{ color: '#af3034', backgroundColor: 'white' }}
+            type="button"
+            onClick={onOpen}
+          >
             Click Here For Terms of Engagement
           </button>
-          <button className={classes.button} type="button">
+          <Checkbox
+            isChecked={isChecked}
+            onChange={handleCheckboxChange}
+            style={{ backgroundColor: 'white', textAlign: 'center' }}
+          >
+            I agree with the Terms of Engagement
+          </Checkbox>
+          <Link to="/logincomplete" className={classes.button}>
             Submit
-          </button>
+          </Link>
         </div>
 
         <img src={benefits} alt="benefits" className={classes.benefits} />
+        {/* <TestComponent /> */}
       </div>
     </div>
   );

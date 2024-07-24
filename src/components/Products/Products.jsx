@@ -7,7 +7,7 @@ import classes from './Products.module.css';
 
 function Products() {
   return (
-    <div>
+    <div id="products">
       <div className={classes.background}>
         <h1 className={classes.title}>Other Products of ScholarshipAuditions.com</h1>
       </div>

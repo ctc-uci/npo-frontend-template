@@ -1,10 +1,106 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import chair from '../../images/chair-star-circle.png';
 import classes from './Profile.module.css';
 
 function Profile() {
+  const instruments = [
+    'Piccolo',
+    'Flute',
+    'Alto Flute',
+    'Oboe',
+    'Clarinet in Eb',
+    'Clarinet in Bb',
+    'Alto Clarinet in Eb',
+    'Bass Clarinet in Bb',
+    'Contra-Bass Clarinet in Eb',
+    'Alto Saxophone in Eb',
+    'Tenor Saxophone in Bb',
+    'Baritone Saxophone in Eb',
+    'Guam',
+    'Bassoon',
+    'Contrabassoon',
+    'Horn in F',
+    'Trumpet in Bb',
+    'Trombone',
+    'Bass Trombone',
+    'Euphonium/Baritone',
+    'Tuba',
+    'Percussion',
+    'Marching Percussion (Captain)',
+    'Marching Pit (Captain)',
+    'Violin',
+    'Viola',
+    'Cello',
+    'Double Bass',
+    'Harp',
+    'Bagpipes',
+  ];
+
+  const states = [
+    'Alabama',
+    'Alaska',
+    'American Samoa',
+    'Arizona',
+    'Arkansas',
+    'California',
+    'Colorado',
+    'Connecticut',
+    'Delaware',
+    'District of Columbia',
+    'Florida',
+    'Georgia',
+    'Guam',
+    'Hawaii',
+    'Idaho',
+    'Illinois',
+    'Indiana',
+    'Iowa',
+    'Kansas',
+    'Kentucky',
+    'Louisiana',
+    'Maine',
+    'Maryland',
+    'Massachusetts',
+    'Michigan',
+    'Minnesota',
+    'Mississippi',
+    'Missouri',
+    'Montana',
+    'Nebraska',
+    'Nevada',
+    'New Hampshire',
+    'New Jersey',
+    'New Mexico',
+    'New York',
+    'North Carolina',
+    'North Dakota',
+    'Northern Mariana Islands',
+    'Ohio',
+    'Oklahoma',
+    'Oregon',
+    'Pennsylvania',
+    'Puerto Rico',
+    'Rhode Island',
+    'South Carolina',
+    'South Dakota',
+    'Tennessee',
+    'Texas',
+    'Utah',
+    'U.S. Virgin Islands',
+    'Vermont',
+    'Virginia',
+    'Washington',
+    'West Virginia',
+    'Wisconsin',
+    'Wyoming',
+    'Armed Force Americas',
+    'Armed Forces Europe',
+    'Armed Forces Pacific',
+  ];
+
   return (
-    <div className={classes.background}>
+    <div id="profile" className={classes.background}>
       <h1>Profile</h1>
       <p className={classes.p1}>
         {`To qualify as a First Chair America Certified Member, you must have held the first
@@ -26,11 +122,14 @@ function Profile() {
           <input type="text" placeholder="Student's Last Name" />
         </div>
         <div className={classes.r2}>
-          <input
-            type="text"
-            placeholder="Student's First Chair Instrument"
-            style={{ width: '65%' }}
-          />
+          <select id="State" name="State" style={{ width: '65%' }}>
+            <option value="" disabled selected>
+              Student's First Chair Instrument
+            </option>
+            {instruments.map(value => (
+              <option value={value}>{value}</option>
+            ))}
+          </select>
           <button style={{ width: '30%' }} type="button">
             Upload Profile Picture
           </button>
@@ -48,7 +147,14 @@ function Profile() {
         <div>
           <input type="text" placeholder="School's Address" style={{ width: '35%' }} />
           <input type="text" placeholder="City" style={{ width: '25%' }} />
-          <input type="text" placeholder="State" />
+          <select id="State" name="State">
+            <option value="" disabled selected>
+              State
+            </option>
+            {states.map(value => (
+              <option value={value}>{value}</option>
+            ))}
+          </select>
           <input type="text" placeholder="Zip" />
         </div>
         {[...Array(3)].map(value => (
@@ -115,9 +221,9 @@ function Profile() {
           </div>
         ))}
         <div>
-          <button className={classes.button} type="button">
+          <Link to="/profilecomplete" className={classes.button}>
             Upload Profile
-          </button>
+          </Link>
           <p style={{ margin: '0 0 0 5%' }}>
             {`Upon uploading your profile, you will be included in the First Chair American National
             Registry. Clicking on your name will direct you to your profile page, and there's a
